@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "reactblog",
+    "password": "reactBlog1",
+    "database": "reactblog",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "reactblog",
+    "password": "reactBlog1",
+    "database": "reactblog",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "reactblog",
+    "password": "reactBlog1",
+    "database": "reactblog",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}

@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from 'react';
 import './App.css';
-import axios from 'axios';
+import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import Home from "./pages/Home";
+import NewEntry from './pages/NewEntry';
 
 function App() {
 
 
-  const [hello, setHello] = useState('');
-
-  useEffect(() => {
-    axios.get('/api/hello').then( res => {setHello(res.data)});
-  }, []);
-
   return (
-    <div>
-      {hello}
+    <div className='App'>
+      <Router>
+      <Link to="/">Home</Link>
+      <Link to="/newentry">Create a blog entry</Link>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/newentry" element={<NewEntry/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
