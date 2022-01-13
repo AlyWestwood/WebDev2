@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
     const [entryList, setEntryList] = useState([]);
+    let navigate = useNavigate();
 
     useEffect(() => {
     axios.get('/entries').then( res => {
@@ -14,12 +16,14 @@ function Home() {
 
     return (
         <div>
-            {entryList.map((value, key) => {
+            {entryList.map((entry) => {
             return (
-            <div className="entry">
-                <div className="title">{value.title}</div>
-                <div className="body">{value.body}</div>
-                <dive className="footer">{value.username}</dive>
+            <div key={entry.id} className="entry" onClick={() => {
+                navigate(`/entry/${entry.id}`)
+            }} >
+                <div className="title">{entry.title}</div>
+                <div className="body">{entry.body}</div>
+                <div className="footer">{entry.username}</div>
             </div>
             )})}
 

@@ -2,8 +2,11 @@ import React from 'react';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function NewEntry() {
+
+    let navigate = useNavigate();
 
     const initialValues = {
         title: "",
@@ -13,7 +16,7 @@ function NewEntry() {
 
     const onSubmit = data => {
         axios.post('/entries', data).then( res => {
-            console.log("it worked");
+            navigate("/");
         });
     }
 

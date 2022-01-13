@@ -1,16 +1,10 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "React blog server",
+  "description": "react test",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "devstart": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AlyWestwood/WebDev2"
   },
   "author": "Aly Westwood",
   "license": "ISC",
@@ -22,7 +16,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.12.5",
+    "sequelize": "^6.13.0",
     "sequelize-cli": "^6.3.0"
   }
 }

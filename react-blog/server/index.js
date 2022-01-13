@@ -12,6 +12,12 @@ const db = require('./models')
 const entryRouter = require('./routes/entries');
 app.use("/entries", entryRouter);
 
+const commentRouter = require('./routes/comments');
+app.use("/comments", commentRouter);
+
+const userRouter = require('./routes/users');
+app.use("/auth", userRouter);
+
 
 db.sequelize.sync();
 
