@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "react_test",
+    "password": "react_test1",
+    "database": "react_test",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "react_test",
+    "password": "react_test1",
+    "database": "react_test",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "react_test",
+    "password": "react_test1",
+    "database": "react_test",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
+

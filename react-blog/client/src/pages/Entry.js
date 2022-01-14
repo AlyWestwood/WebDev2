@@ -26,7 +26,7 @@ function Entry() {
         },
         {
             headers: {
-                accessToken: sessionStorage.getItem("accessToken")
+                accessToken: localStorage.getItem("accessToken")
             }
         }).then(res=>{
             if(res.data.error){
